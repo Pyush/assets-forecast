@@ -49,6 +49,7 @@ export class AssetForecastComponent implements OnInit {
   constructor(private fb: FormBuilder, private _formBuilder: FormBuilder, private httpService: HttpService) {}
 
   ngOnInit(): void {
+    console.log('asset')
     this.VOForm = this._formBuilder.group({
       VORows: this._formBuilder.array([]),
     });

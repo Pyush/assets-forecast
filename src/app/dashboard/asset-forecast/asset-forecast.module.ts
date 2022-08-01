@@ -6,6 +6,7 @@ import { AssetForecastComponent } from './asset-forecast.component';
 const routes: Routes = [
   {
     path: '',
+    pathMatch: 'full',
     component: AssetForecastComponent,
   },
 ];

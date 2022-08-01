@@ -1,11 +1,14 @@
 <mat-toolbar color="primary">
   <mat-toolbar-row>
     <div class="dashboard-button-row">
-      <button mat-stroked-button>Asset Forecast</button>
-      <!-- <button mat-stroked-button>Asset Forecast</button>
+      <button mat-stroked-button (click)="gotoForeCast()">Asset Forecast</button>
+      <button mat-stroked-button (click)="gotoTest()">Test</button>
+      <!--
       <button mat-stroked-button>Asset Forecast</button>
       <button mat-stroked-button>Asset Forecast</button> -->
     </div>
   </mat-toolbar-row>
 </mat-toolbar>
+<div>
 <router-outlet></router-outlet>
+</div>
