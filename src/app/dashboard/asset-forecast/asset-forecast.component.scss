@@ -1,5 +1,22 @@
+// taken from https://github.com/angular/components/issues/8680            
+.table-container {
+  width: 100vw; // <!-- THIS WORKS for horizontal scrolling (all columns visibile)
+  // width: 100%; // <!-- THIS DOESNT for horizontal scrolling (no scrollbars)
+  // width: 2800px; // <!-- THIS ALSO DOESNT for horizontal scrolling (no scrollbars)
+}
+
 table {
+  display: block;
   width: 100%;
+  overflow-x: auto;
+}
+
+.w-75{
+  width: 75px;
+}
+
+.w-100{
+  width: 100px;
 }
 
 .mat-paginator-range-label {
@@ -21,4 +38,20 @@ input.mat-input-element {
   color: rgb(0, 0, 0);
 }
 
+// .mat-footer-row,
+// .mat-header-row,
+// .mat-row {
+//    // display: inline-flex;
+//     min-width: 100%;
+// }
+
+// table column width helper for mat-tables
+@for $index from 0 through 200 {
+  $size: $index * 2;
+
+  .table-column-#{$size} {
+      // flex: 0 1 #{$size}#{"px"};
+      min-width: #{$size}#{"px"};
+  }
+}
 
